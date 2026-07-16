@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Experiment artifacts and large local files
+/checkpoints/
+/datasets/
+/logs/
+/outputs/
+/wandb/
+*.ckpt
+*.pth
+*.pt
+
+# Build artifacts
+/build/
+/dist/
