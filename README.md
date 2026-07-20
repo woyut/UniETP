@@ -4,8 +4,6 @@
 
 ### Unifying Environments for Generalizable Embodied Task Planning
 
-**Paper:** The arXiv link will be added when the paper becomes public.
-
 </div>
 
 > We are actively working on releasing the data and code. Please stay tuned for updates!
