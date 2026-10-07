@@ -1,0 +1,59 @@
+{
+    "stages": {
+      "paths": {
+        ".json": [
+          "stages"
+        ]
+      }
+    },
+    "objects": {
+      "paths": {
+        ".json": [
+          "objects/*",
+          "objects/decomposed/*",
+          "../../objects/ycb/configs/",
+          "../../objects/objects_ovmm/train_val/ai2thorhab/configs/objects",
+          "../../objects/objects_ovmm/train_val/amazon_berkeley/configs",
+          "../../objects/objects_ovmm/train_val/google_scanned/configs",
+          "../../objects/objects_ovmm/train_val/hssd/configs/objects"
+        ]
+      }
+    },
+    "articulated_objects": {
+      "paths": {
+        ".json": [
+          "urdf/*/"
+        ]
+      }
+    },
+    "pbr_ibl_configs": {
+      "default_attributes": {},
+      "paths": {
+        ".json": [
+          "pbr"
+        ]
+      }
+    },
+    "scene_instances": {
+      "default_attributes": {
+        "default_lighting": "",
+        "semantic_scene_instance": "%%CONFIG_NAME_AS_ASSET_FILENAME%%.semantic_config.json"
+      },
+      "paths": {
+        ".json": [
+          "scenes-articulated"
+        ]
+      }
+    },
+    "semantic_scene_descriptor_instances": {
+      "default_attributes": {
+        "semantic_descriptor_filename": "../hssd-hab_semantic_lexicon.json"
+      },
+      "paths": {
+        ".json": [
+          "semantics/scenes/*"
+        ]
+      }
+    }
+  }
+  

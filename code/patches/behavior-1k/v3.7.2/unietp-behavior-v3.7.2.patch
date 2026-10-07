@@ -1,0 +1,48 @@
+--- a/OmniGibson/omnigibson/maps/segmentation_map.py
++++ b/OmniGibson/omnigibson/maps/segmentation_map.py
+@@ -122,8 +122,8 @@
+             return None, None
+ 
+         sem_id = self.room_sem_name_to_sem_id[room_type]
+-        valid_idx = th.tensor(th.where(self.room_sem_map == sem_id))
+-        random_point_map = valid_idx[:, th.randint(valid_idx.shape[1])]
++        valid_idx = th.stack(th.where(self.room_sem_map == sem_id), dim=0)
++        random_point_map = valid_idx[:, th.randint(0, valid_idx.shape[1], (1,)).item()]
+ 
+         x, y = self.map_to_world(random_point_map)
+         # assume only 1 floor
+@@ -148,8 +148,8 @@
+             return None, None
+ 
+         ins_id = self.room_ins_name_to_ins_id[room_instance]
+-        valid_idx = th.tensor(th.where(self.room_ins_map == ins_id))
+-        random_point_map = valid_idx[:, th.randint(valid_idx.shape[1])]
++        valid_idx = th.stack(th.where(self.room_ins_map == ins_id), dim=0)
++        random_point_map = valid_idx[:, th.randint(0, valid_idx.shape[1], (1,)).item()]
+ 
+         x, y = self.map_to_world(random_point_map)
+         # assume only 1 floor
+--- a/OmniGibson/omnigibson/robots/robot_base.py
++++ b/OmniGibson/omnigibson/robots/robot_base.py
+@@ -155,7 +155,7 @@
+             scale=scale,
+             visible=visible,
+             fixed_base=fixed_base,
+-            visual_only=visual_only,
++            visual_only=True,
+             self_collisions=self_collisions,
+             prim_type=PrimType.RIGID,
+             include_default_states=True,
+--- a/OmniGibson/omnigibson/sensors/vision_sensor.py
++++ b/OmniGibson/omnigibson/sensors/vision_sensor.py
+@@ -135,8 +135,8 @@
+     ):
+         # Create load config from inputs
+         load_config = dict() if load_config is None else load_config
+-        load_config["image_height"] = image_height
+-        load_config["image_width"] = image_width
++        load_config["image_height"] = 512
++        load_config["image_width"] = 512
+         load_config["focal_length"] = focal_length
+         load_config["focus_distance"] = focus_distance
+         load_config["fstop"] = fstop

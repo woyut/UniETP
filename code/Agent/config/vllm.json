@@ -1,0 +1,7 @@
+{
+  "provider": "vllm",
+  "base_url": "http://127.0.0.1:9000/v1",
+  "temperature": 0.2,
+  "max_tokens": 2048,
+  "timeout": 1000.0
+}

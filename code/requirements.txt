@@ -1,0 +1,17 @@
+aenum
+ai2thor==5.0.0
+anthropic
+google-genai
+json-repair
+matplotlib
+numpy>=1.24,<2
+openai
+opencv-python==4.8.1.78
+pandas
+Pillow
+prior
+pydantic>=2
+pyquaternion
+PyYAML
+scipy
+tqdm

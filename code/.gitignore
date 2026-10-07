@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.env
+.venv/
+/third_party/
+outputs/
+debug_tests/
+Log/
+*.log
+data/*
+/data/benchmark_data_example/
+datasets/
+checkpoints/
+*.ckpt
+*.pt
+*.pth
+*.safetensors

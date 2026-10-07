@@ -6,7 +6,6 @@
 
 </div>
 
-> We are actively working on releasing the data and code. Please stay tuned for updates!
 
 <p align="center">
   <img src="assets/teaser.png" alt="UniETP overview" width="100%">
